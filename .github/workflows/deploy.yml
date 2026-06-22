@@ -31,7 +31,8 @@ jobs:
 
       - name: Generate API docs
         run: |
-          python -m sphinx.apidoc -o docs/api ../mylib ../demo_app
+          # Use the sphinx-apidoc console script to avoid module import issues
+          sphinx-apidoc -o docs/api mylib demo_app
 
       - name: Build documentation
         run: |
