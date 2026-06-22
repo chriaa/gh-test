@@ -17,12 +17,12 @@ Replace `yourusername` with your actual GitHub username.
    - Verify the latest workflow run shows ✅ (green checkmark)
    
 2. **Check GitHub Pages settings** → https://github.com/yourusername/gh-pages-ex/settings/pages
-   - Ensure "Source" is set to **"GitHub Actions"**
-   - NOT "Deploy from a branch"
+   - If you are using the default GitHub Pages source, set it to **`gh-pages` branch**
+   - If you want to use GitHub Actions Pages instead, set Source to **"GitHub Actions"** and use this workflow
 
 3. **View your site** → https://yourusername.github.io/gh-pages-ex/
    - The site should display the Sphinx documentation with a left sidebar navigation
-   - You should see: Guides, API Reference, Resources, and Project sections
+   - You should see: Guides, API Reference, Resources, Demo Application, and Project sections
 
 ## 🚀 Features
 
@@ -111,7 +111,8 @@ The GitHub Actions workflow will:
 
 1. **Check GitHub Pages Settings**
    - Go to repo Settings → Pages
-   - Verify Source is set to "GitHub Actions" (NOT a branch)
+   - Recommended: set Source to **`gh-pages` branch**
+   - Alternative: set Source to **"GitHub Actions"** if you want actions-based deployment
 
 2. **Check Actions Tab** 
    - Ensure the latest workflow run is ✅ green

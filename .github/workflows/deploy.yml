@@ -10,22 +10,15 @@ on:
       - main
       - master
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -45,25 +38,15 @@ jobs:
           cd docs
           make clean
           make html
+          touch _build/html/.nojekyll
 
-      - name: Add .nojekyll to prevent Jekyll processing
-        run: |
-          touch docs/_build/html/.nojekyll
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v5
         with:
-          path: 'docs/_build/html'
-
-  deploy:
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs/_build/html
+          keep_files: false
+          commit_message: "Deploy docs to gh-pages"
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
