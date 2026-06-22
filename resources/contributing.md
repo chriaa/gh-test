@@ -140,7 +140,7 @@ If you're adding a new module to MyLib:
 ### 1. Create the Module
 
 ```bash
-# Create mylib/newmodule.py
+# Create a new module inside mylib, for example mylib/new_component.py
 # Add your functions/classes with docstrings
 ```
 
@@ -149,29 +149,33 @@ If you're adding a new module to MyLib:
 Edit `mylib/__init__.py`:
 
 ```python
-from .newmodule import my_function
+from .core import Calculator
+from .utils import format_text, add_prefix
+# from .new_component import my_function
 
 __all__ = [
     "Calculator",
-    "format_text", 
+    "format_text",
     "add_prefix",
-    "my_function",  # Add your export
+    # "my_function",  # Add your export here once the module exists
 ]
 ```
 
 ### 3. Create Documentation
 
-Create `docs/api/newmodule.rst`:
+Create `docs/api/<your_module>.rst` as plain example source code, but only when you actually add the module to the package.
 
-```rst
+```text
 New Module
 ==========
 
-.. automodule:: mylib.newmodule
+.. automodule:: mylib.your_module
    :members:
    :undoc-members:
    :show-inheritance:
 ```
+
+This is an example format to copy, but do not add it unless the new package module exists.
 
 ### 4. Update Documentation Index
 
@@ -183,7 +187,7 @@ Edit `docs/api/index.rst`:
 
    core
    utils
-   newmodule  # Add your module
+   your_module  # Add your module
 ```
 
 ## Adding Documentation
@@ -358,7 +362,7 @@ pylint mylib/
 ## Questions?
 
 - Check the [API Reference](../api/index)
-- Read the [Getting Started Guide](../guides/getting_started)
+- Read the [Tutorials](tutorials)
 - Review [Best Practices](best_practices.md)
 - Open a GitHub issue
 

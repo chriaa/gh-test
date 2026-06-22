@@ -4,25 +4,23 @@ A dummy Python library demonstrating Sphinx documentation with Markdown support 
 
 ## 📖 View Full Documentation
 
-**⚠️ Important**: The full documentation is available at the GitHub Pages site, NOT in this README file.
+**⚠️ Important**: The full documentation is generated from `docs/index.md` and published via GitHub Actions.
 
-Once deployed, visit: `https://yourusername.github.io/gh-pages-ex/`
-
-Replace `yourusername` with your actual GitHub username.
+Once deployed, visit: `https://chriaa.github.io/gh-test/`
 
 ### Verify GitHub Pages Deployment
 
-1. **Check your Actions** → https://github.com/yourusername/gh-pages-ex/actions
-   - Look for "Deploy Documentation to GitHub Pages" workflow
-   - Verify the latest workflow run shows ✅ (green checkmark)
+1. **Check your Actions** → https://github.com/chriaa/gh-test/actions
+   - Look for the build workflow and verify the latest run is ✅
+   - It should build the Sphinx site and publish HTML from `docs/_build/html`
    
-2. **Check GitHub Pages settings** → https://github.com/yourusername/gh-pages-ex/settings/pages
-   - If you are using the default GitHub Pages source, set it to **`gh-pages` branch**
-   - If you want to use GitHub Actions Pages instead, set Source to **"GitHub Actions"** and use this workflow
+2. **Check GitHub Pages settings** → https://github.com/chriaa/gh-test/settings/pages
+   - Set the source to **GitHub Actions**
+   - This workflow publishes the site root directly from the generated docs
 
-3. **View your site** → https://yourusername.github.io/gh-pages-ex/
+3. **View your site** → https://chriaa.github.io/gh-test/
    - The site should display the Sphinx documentation with a left sidebar navigation
-   - You should see: Guides, API Reference, Resources, Demo Application, and Project sections
+   - You should see: User Guide, API Reference, and the generated docs from `docs/index.md`
 
 ## 🚀 Features
 

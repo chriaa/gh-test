@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mylib"
+version = "0.1.0"
+description = "A simple Python library demonstrating Sphinx documentation with MyST Parser."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Demo Author" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/chriaa/gh-test"
+Documentation = "https://chriaa.github.io/gh-test/"
+
+[tool.setuptools.packages.find]
+where = ["."]

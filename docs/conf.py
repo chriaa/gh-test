@@ -2,20 +2,9 @@
 
 import os
 import sys
-import shutil
 
 # Add the parent directory to sys.path so we can import mylib
 sys.path.insert(0, os.path.abspath('..'))
-
-# Copy resources into docs folder for Sphinx to process
-# This allows Sphinx to find markdown files from the resources folder
-resources_src = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'resources'))
-resources_dst = os.path.join(os.path.dirname(__file__), 'resources')
-
-if os.path.exists(resources_src):
-    if os.path.exists(resources_dst):
-        shutil.rmtree(resources_dst)
-    shutil.copytree(resources_src, resources_dst)
 
 # Project information
 project = 'MyLib'
@@ -26,10 +15,15 @@ release = '0.1.0'
 # Sphinx extensions
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'myst_parser',
 ]
+
+autosummary_generate = True
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+master_doc = 'index'
 
 # MyST Parser configuration
 myst_enable_extensions = [

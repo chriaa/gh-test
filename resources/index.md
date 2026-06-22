@@ -6,6 +6,8 @@ This section contains additional resources, guides, and documentation for the My
 :maxdepth: 2
 
 architecture
+tutorials
+deployment
 best_practices
 contributing
 ```
