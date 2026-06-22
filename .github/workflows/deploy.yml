@@ -45,6 +45,10 @@ jobs:
           make clean
           make html
 
+      - name: Add .nojekyll to prevent Jekyll processing
+        run: |
+          touch docs/_build/html/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
