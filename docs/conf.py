@@ -44,7 +44,12 @@ source_suffix = {
 }
 
 # Theme configuration
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    'collapse_navigation': False,
+    'navigation_depth': 3,
+    'titles_only': False,
+}
 html_static_path = ['_static']
 
 # Autodoc settings

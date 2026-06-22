@@ -1,159 +1,111 @@
-Welcome to MyLib
-================
+Overview
+========
 
-A simple Python library demonstrating professional documentation practices with Sphinx, MyST, and GitHub Pages.
+Welcome to the MyLib documentation site.
 
-**MyLib** is a sample Python library that showcases how to create comprehensive documentation. It demonstrates clean code organization, professional API documentation, and modern deployment practices.
+This site now includes:
 
-Quick Start
+- **A demo application** documented via Sphinx autodoc from the `demo_app` package
+- **A library API reference** generated from the `mylib` package
+- **Custom Markdown resources** under `/resources` exposed as individual pages
+- **Project setup and deployment instructions** for GitHub Pages
+
+Quick Links
 -----------
 
+- :doc:`Demo Application <app/index>` - Sphinx docs for the dummy app
+- :doc:`Library API <api/index>` - Auto-generated Python API docs
+- :doc:`Getting Started <guides/getting_started>` - User guide for using the project
+- :doc:`Architecture <resources/architecture>` - System architecture notes
+- :doc:`Best Practices <resources/best_practices>` - Development guidelines
+- :doc:`Contributing <resources/contributing>` - Contribution instructions
+- :doc:`Setup <setup>` - Local development setup
+- :doc:`Deployment <deployment>` - GitHub Pages deployment guide
+
+Project Overview
+----------------
+
+This repository includes two main codebases:
+
+1. **`demo_app`** - A dummy application with its own docstrings and Sphinx autodoc support.
+2. **`mylib`** - A utility library with a Calculator and text utilities.
+
+The documentation site uses Sphinx to extract documentation from both source packages and to render custom Markdown content from `/resources`.
+
 Installation
-^^^^^^^^^^^^
+------------
 
 .. code-block:: bash
 
     pip install -e .
-
-Basic Usage
-^^^^^^^^^^^
-
-**Using the Calculator:**
-
-.. code-block:: python
-
-    from mylib import Calculator
-    
-    calc = Calculator()
-    result = calc.add(10, 5)      # 15
-    result = calc.multiply(4, 2)  # 8
-    result = calc.divide(20, 4)   # 5.0
-
-**Using Text Utilities:**
-
-.. code-block:: python
-
-    from mylib import format_text, add_prefix
-    
-    text = format_text("hello", uppercase=True)  # "HELLO"
-    prefixed = add_prefix("world")               # "PREFIX_world"
+    pip install -r requirements-dev.txt
 
 Build Documentation Locally
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 .. code-block:: bash
 
-    pip install -r requirements-dev.txt
     cd docs
     make clean
     make html
     open _build/html/index.html
 
-Documentation Sections
-----------------------
+Documentation Structure
+-----------------------
 
-**📖 Guides** - Getting Started & Tutorial
-    Start here to learn how to use MyLib:
-    
-    - :doc:`Getting Started <guides/getting_started>` - 5-minute introduction
-    - :doc:`Tutorial <guides/tutorial>` - Build an application with MyLib
+**Demo Application**
+- Sphinx-generated docs from `demo_app`
+- Includes application flow, API references, and source-level docs
 
-**🔧 API Reference** - Complete Function & Class Documentation
-    Detailed reference for all modules:
-    
-    - :doc:`Core Module <api/core>` - Calculator class
-    - :doc:`Utils Module <api/utils>` - Text utilities
+**Library API**
+- Auto-generated documentation from `mylib`
+- Includes `Calculator`, utilities, and API reference pages
 
-**📚 Resources** - Architecture & Best Practices
-    Learn about the project structure and guidelines:
-    
-    - :doc:`Architecture <resources/architecture>` - System design
-    - :doc:`Best Practices <resources/best_practices>` - Development guidelines
-    - :doc:`Contributing <resources/contributing>` - How to contribute
+**Resources**
+- Markdown content from `/resources`
+- Includes architecture, best practices, and contributing guides
 
-**📋 Project** - Setup & Deployment
-    Local development and production deployment:
-    
-    - :doc:`Setup <setup>` - Local development setup
-    - :doc:`Deployment <deployment>` - Deploy to GitHub Pages
-
-Key Features
-------------
-
-✅ **Professional Grade** - Production-ready code structure  
-✅ **Well Documented** - Every function has comprehensive docstrings  
-✅ **Multiple Formats** - Mix Markdown and reStructuredText  
-✅ **Auto-Generated API** - Documentation from code docstrings  
-✅ **GitHub Pages Ready** - One-click deployment with GitHub Actions  
-✅ **Best Practices** - Demonstrates Python and documentation standards  
+**Project**
+- Setup and deployment instructions
 
 What You'll Find Here
 ---------------------
 
-This documentation site includes:
-
-1. **Complete API Reference** (auto-generated from Python docstrings)
-2. **Getting Started Guide** (quick introduction to MyLib)
-3. **Comprehensive Tutorial** (build a real application)
-4. **Best Practices Guide** (development guidelines)
-5. **Architecture Overview** (system design and structure)
-6. **Contributing Guidelines** (how to contribute)
-7. **Setup Instructions** (local development)
-8. **Deployment Guide** (GitHub Pages with GitHub Actions)
+- A real demo application documented with Sphinx
+- Source extraction of the application code
+- Auto-generated library API docs
+- Markdown resource pages in the left navigation
+- A unified site with both app docs and library docs
 
 Requirements
 ------------
 
 - Python 3.6 or higher
-- pip (Python package manager)
+- pip
 
-For documentation:
+Documentation dependencies:
 
 - Sphinx >= 4.0.0
 - myst-parser >= 0.18.0
-- alabaster >= 0.7.12
-
-Quick Install
-^^^^^^^^^^^^^
-
-.. code-block:: bash
-
-    # Install dependencies
-    pip install -r requirements-dev.txt
-    
-    # Install the package
-    pip install -e .
+- sphinx-rtd-theme >= 1.2.0
 
 Navigation
 ----------
 
-**First Time Here?**
-    Start with :doc:`Getting Started <guides/getting_started>`
-
-**Want to Use MyLib?**
-    Read the :doc:`Tutorial <guides/tutorial>`
-
-**Looking for API Details?**
-    See :doc:`Core Module <api/core>` or :doc:`Utils Module <api/utils>`
-
-**Contributing to the Project?**
-    Check :doc:`Contributing <resources/contributing>`
-
-**Setting Up Locally?**
-    Follow :doc:`Setup <setup>`
-
-**Deploying Docs?**
-    Read :doc:`Deployment <deployment>`
+- Start at :doc:`Demo Application <app/index>` to explore the dummy app docs
+- Browse :doc:`Library API <api/index>` for the code reference
+- Use :doc:`Resources <resources/index>` for Markdown guides
+- Follow :doc:`Setup <setup>` and :doc:`Deployment <deployment>` for local and site setup
 
 Technology Stack
 ----------------
 
-- **Python 3.6+** - Programming language
-- **Sphinx** - Documentation generator
-- **MyST Parser** - Markdown support for Sphinx
-- **Alabaster** - Clean, professional theme
-- **GitHub Actions** - CI/CD and deployment
-- **GitHub Pages** - Documentation hosting
+- **Python**
+- **Sphinx**
+- **MyST Parser**
+- **sphinx_rtd_theme**
+- **GitHub Actions**
+- **GitHub Pages**
 
 Project Structure
 -----------------
@@ -161,30 +113,28 @@ Project Structure
 .. code-block:: text
 
     gh-pages-ex/
-    ├── mylib/                    # Python library
+    ├── demo_app/                 # Demo application package
     │   ├── __init__.py
-    │   ├── core.py               # Calculator class
-    │   └── utils.py              # Text utilities
-    ├── docs/                     # Sphinx documentation
+    │   ├── app.py
+    │   └── utils.py
+    ├── mylib/                    # Python library package
+    ├── docs/                     # Sphinx documentation source
     │   ├── conf.py
     │   ├── index.rst
-    │   ├── overview.rst          # This page
-    │   ├── api/                  # API documentation
-    │   ├── guides/               # User guides
-    │   └── resources/            # Resources (auto-copied)
-    ├── resources/                # Source markdown files
-    ├── .github/workflows/        # GitHub Actions
-    └── setup.py                  # Package setup
+    │   ├── overview.rst
+    │   ├── app/
+    │   ├── api/
+    │   ├── guides/
+    │   └── resources/
+    ├── resources/                # Source Markdown docs
+    ├── .github/workflows/
+    └── setup.py
 
-Support & Resources
--------------------
+Support
+-------
 
-- **Repository**: https://github.com/yourusername/gh-pages-ex
-- **Issues**: Report bugs on GitHub Issues
-- **Sphinx Documentation**: https://www.sphinx-doc.org/
-- **MyST Parser**: https://myst-parser.readthedocs.io/
-- **GitHub Pages**: https://docs.github.com/en/pages
+- Repo issues: https://github.com/yourusername/gh-pages-ex/issues
+- Sphinx docs: https://www.sphinx-doc.org/
+- MyST docs: https://myst-parser.readthedocs.io/
 
----
-
-Ready to dive in? Start with the :doc:`Getting Started <guides/getting_started>` guide or explore the :doc:`API Reference <api/index>`!
+Ready to explore? Start with :doc:`Demo Application <app/index>` or :doc:`Library API <api/index>`.

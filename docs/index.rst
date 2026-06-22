@@ -11,6 +11,7 @@ documentation using Sphinx with both reStructuredText (RST) and Markdown formats
    overview
    guides/getting_started
    guides/tutorial
+   app/index
    api/index
    resources/index
 
@@ -21,10 +22,15 @@ documentation using Sphinx with both reStructuredText (RST) and Markdown formats
    setup
    deployment
 
-About MyLib
------------
+Demo Application and Library Docs
+---------------------------------
 
-MyLib is a simple Python library that showcases:
+This documentation site includes two main sections:
+
+- **Demo Application**: A custom application built for this project, documented with Sphinx autodoc and source code extraction.
+- **Library API**: The `mylib` utility library with auto-generated API pages.
+
+The **Resources** section contains your own Markdown documentation pages under `/resources`, exposed here as individual pages in the left navigation.
 
 - **Clean code structure** with well-organized modules
 - **Comprehensive docstrings** for automatic API documentation
