@@ -139,6 +139,11 @@ The GitHub Actions workflow will:
 ## 📖 Documentation is Here
 
 Once deployed, the full documentation is at:
-**https://yourusername.github.io/gh-pages-ex/**
+**https://chriaa.github.io/gh-test/**
 
-The left sidebar navigation will show you all available sections!
+If GitHub Pages is serving the repository root, the repository now includes a root `index.html` redirect to the built docs.
+
+On the live site, click the left sidebar entry:
+- **Demo Application**
+
+This will take you into the Sphinx-powered documentation for the dummy app and its extracted docstrings.
