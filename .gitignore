@@ -48,6 +48,7 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 docs/_static/
+docs/resources/
 
 # Virtual environments
 venv/

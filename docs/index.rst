@@ -8,9 +8,18 @@ documentation using Sphinx with both reStructuredText (RST) and Markdown formats
    :maxdepth: 2
    :caption: Contents:
 
+   overview
    guides/getting_started
    guides/tutorial
    api/index
+   resources/index
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Project:
+
+   setup
+   deployment
 
 About MyLib
 -----------
