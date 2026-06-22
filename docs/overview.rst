@@ -14,6 +14,7 @@ Quick Links
 -----------
 
 - :doc:`Demo Application <app/index>` - Sphinx docs for the dummy app
+  - Direct link: ``app/index.html``
 - :doc:`Library API <api/index>` - Auto-generated Python API docs
 - :doc:`Getting Started <guides/getting_started>` - User guide for using the project
 - :doc:`Architecture <resources/architecture>` - System architecture notes

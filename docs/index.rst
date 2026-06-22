@@ -27,6 +27,22 @@ Demo Application and Library Docs
 
 This documentation site includes two main sections:
 
+- **Demo Application**: View the dummy app docs in the `app` section.
+- **Library API**: View the `mylib` reference in the `api` section.
+
+The `Demo Application` section is available directly at:
+
+- :doc:`Demo Application <app/index>`
+- direct URL: ``app/index.html``
+
+The left sidebar will show:
+
+- Demo Application
+  - Dummy Application
+  - Demo App Utilities
+
+If you are on the deployed site and you do not see the Demo Application section, the site may still be using an older deployment version.
+
 - **Demo Application**: A custom application built for this project, documented with Sphinx autodoc and source code extraction.
 - **Library API**: The `mylib` utility library with auto-generated API pages.
 
